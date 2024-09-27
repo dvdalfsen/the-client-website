@@ -1,0 +1,146 @@
+/* ================================
+   imports 
+   ================================ */
+/* ================================
+   media queries 
+   ================================ */
+/* ================================
+   variables
+   ================================ */
+/* ================================
+   helper functions 
+   ================================ */
+/* ================================
+   document 
+   ================================ */
+html {
+  background: #FFFFFF;
+}
+
+body {
+  position: relative;
+  font-family: "Archivo", sans-serif;
+  font-size: calc(16px * 1);
+  line-height: calc(1 * 2);
+  font-weight: 400;
+  color: #222226;
+  letter-spacing: calc(1px * 1);
+  background: #FFFFFF;
+}
+
+main {
+  padding-top: 128px;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 64px 16px 32px 16px;
+}
+@media only screen and (min-width: 640px) {
+  .wrapper {
+    padding: 64px 32px 32px 32px;
+  }
+}
+@media only screen and (min-width: 1080px) {
+  .wrapper {
+    padding: 64px 64px 32px 64px;
+  }
+}
+
+/* ================================
+   content 
+   ================================ */
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Archivo", sans-serif;
+  font-weight: 400;
+  line-height: calc(1 * 1);
+  color: #222226;
+  text-transform: initial;
+  position: relative;
+  z-index: 1;
+  padding-bottom: 32px;
+}
+
+h1,
+h2 {
+  font-size: calc(16px * 2);
+  color: #222226;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+@media only screen and (min-width: 640px) {
+  h1,
+  h2 {
+    font-size: calc(16px * 3);
+  }
+}
+
+h3 {
+  font-size: calc(16px * 2);
+  color: #222226;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: calc(16px * 1.25);
+  color: #222226;
+}
+
+p {
+  padding-bottom: 32px;
+}
+
+a, a:not(.button), a:visited, a:active, a:focus {
+  cursor: pointer;
+  color: #364BF7;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+a:hover {
+  color: #2239f6;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+strong {
+  font-weight: 700;
+}
+
+em {
+  color: #6f6f7c;
+  font-weight: 700;
+}
+
+del {
+  font-weight: 700;
+}
+
+::-moz-selection {
+  background: rgba(54, 75, 247, 0.5);
+  text-shadow: none;
+}
+
+::selection {
+  background: rgba(54, 75, 247, 0.5);
+  text-shadow: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* ================================
+   imports 
+   ================================ */
