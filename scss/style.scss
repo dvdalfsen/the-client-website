@@ -323,6 +323,14 @@
    del {
        font-weight: $fw-bold;
    }
+
+   // ul
+
+   ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+   }
    
    
    // selection
@@ -352,8 +360,8 @@
    
    // header + footer
    
-//    @import 'footer';
-//    @import 'header';
+   @import 'footer';
+   @import 'header';
    
    // blocks
    

@@ -1,0 +1,34 @@
+.header{
+    top: 0;
+    height: 128px;
+    // @include padding;
+    padding: 32px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .image-container{
+
+        img{
+            height: 96px;
+        }
+    }
+
+    .nav{
+        
+        li{
+            text-transform: uppercase;
+            margin-right: 32px;
+            float: left;
+
+            a{
+                color: $cl-black;
+            }
+        }
+    }
+
+    .button-container{
+        padding-right: 64px;
+    }
+}

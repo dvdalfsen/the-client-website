@@ -1,8 +1,10 @@
 .button-container{
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 96px;
     width: fit-content;
+    max-height: 48px;
+
 
     @include tablet{
         flex-direction: row;
@@ -13,7 +15,7 @@
 
     position: relative;
     background-color: $cl-white;
-    padding: 16px;
+    padding: 8px;
     border: $bor;
     display: grid;
     align-items: center;
@@ -28,26 +30,54 @@
     &::after{
         content: '';
         position: absolute;
-        width: 64px;
-        height: 64px;
-        // right: -64px;
-        left: 48%;
+        width: 48px;
+        height: 100%;
+        // left: 75%;
+        right: -2px;
         border: $bor;
-        border-left: 0px;
-        // background-image: url('/assets/icons/Icon.svg');
-        background-size: 32px;
+        border-left: 0px; 
+        background-size: 24px;
         background-position: center;
         background-repeat: no-repeat;
-        // background: $cl-black;
         @include transition-slow;
     }
 
     &:hover{
 
+
         &::after{
-            left: 100%;
-            background-image: url('/assets/icons/Icon.svg');
-            
+            // left: 100%;
+            right: -50px;
+            background-image: url('/assets/icons/icon.svg');
         }
+    }
+}
+
+.link{
+
+    position: relative;
+    background-color: $cl-white;
+    // padding: 16px;
+    // border: $bor;
+    display: grid;
+    align-items: center;
+
+    span{
+        color: $cl-primary;
+        text-transform: uppercase;
+        font-weight: $fw-black;
+    }
+
+    &::after{
+        content: '';
+        position: absolute;
+        width: 64px;
+        height: 100%;
+        left: 100%;
+        background-size: 24px;
+        background-image: url('/assets/icons/icon-blue.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        @include transition-slow;
     }
 }

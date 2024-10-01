@@ -130,6 +130,12 @@ del {
   font-weight: 700;
 }
 
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
 ::-moz-selection {
   background: rgba(54, 75, 247, 0.5);
   text-shadow: none;
@@ -159,10 +165,11 @@ input:-webkit-autofill:active {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 32px;
+  gap: 96px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  max-height: 48px;
 }
 @media only screen and (min-width: 640px) {
   .button-container {
@@ -176,7 +183,7 @@ input:-webkit-autofill:active {
 .button {
   position: relative;
   background-color: #FFFFFF;
-  padding: 16px;
+  padding: 8px;
   border: solid #151515 2px;
   display: grid;
   -webkit-box-align: center;
@@ -191,20 +198,80 @@ input:-webkit-autofill:active {
 .button::after {
   content: "";
   position: absolute;
-  width: 64px;
-  height: 64px;
-  left: 48%;
+  width: 48px;
+  height: 100%;
+  right: -2px;
   border: solid #151515 2px;
   border-left: 0px;
-  background-size: 32px;
+  background-size: 24px;
   background-position: center;
   background-repeat: no-repeat;
   -webkit-transition: all calc(0.25s * 2) ease;
   transition: all calc(0.25s * 2) ease;
 }
 .button:hover::after {
+  right: -50px;
+  background-image: url("/assets/icons/icon.svg");
+}
+
+.link {
+  position: relative;
+  background-color: #FFFFFF;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.link span {
+  color: #364BF7;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+.link::after {
+  content: "";
+  position: absolute;
+  width: 64px;
+  height: 100%;
   left: 100%;
-  background-image: url("/assets/icons/Icon.svg");
+  background-size: 24px;
+  background-image: url("/assets/icons/icon-blue.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-transition: all calc(0.25s * 2) ease;
+  transition: all calc(0.25s * 2) ease;
+}
+
+.header {
+  top: 0;
+  height: 128px;
+  padding: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header .image-container img {
+  height: 96px;
+}
+.header .nav li {
+  text-transform: uppercase;
+  margin-right: 32px;
+  float: left;
+}
+.header .nav li a {
+  color: #222226;
+}
+.header .button-container {
+  padding-right: 64px;
 }
 
 section.hero .text-hero {
