@@ -19,13 +19,15 @@ html {
 
 body {
   position: relative;
-  font-family: "Archivo", sans-serif;
+  font-family: "Archivo", system-ui;
   font-size: calc(16px * 1);
   line-height: calc(1 * 2);
   font-weight: 400;
   color: #222226;
   letter-spacing: calc(1px * 1);
   background: #FFFFFF;
+  border: solid #222226 2px;
+  margin: 16px;
 }
 
 main {
@@ -55,14 +57,16 @@ main {
 h1,
 h2,
 h3,
-h4 {
-  font-family: "Archivo", sans-serif;
+h4,
+p {
+  font-family: "Archivo", system-ui;
   font-weight: 400;
   line-height: calc(1 * 1);
   color: #222226;
   text-transform: initial;
   position: relative;
   z-index: 1;
+  margin: 0px;
   padding-bottom: 32px;
 }
 
@@ -95,6 +99,9 @@ p {
   padding-bottom: 32px;
 }
 
+a {
+  text-decoration: none;
+}
 a, a:not(.button), a:visited, a:active, a:focus {
   cursor: pointer;
   color: #364BF7;
@@ -144,3 +151,76 @@ input:-webkit-autofill:active {
 /* ================================
    imports 
    ================================ */
+.button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 32px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+@media only screen and (min-width: 640px) {
+  .button-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.button {
+  position: relative;
+  background-color: #FFFFFF;
+  padding: 16px;
+  border: solid #151515 2px;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.button span {
+  color: #222226;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+.button::after {
+  content: "";
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  left: 48%;
+  border: solid #151515 2px;
+  border-left: 0px;
+  background-size: 32px;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-transition: all calc(0.25s * 2) ease;
+  transition: all calc(0.25s * 2) ease;
+}
+.button:hover::after {
+  left: 100%;
+  background-image: url("/assets/icons/Icon.svg");
+}
+
+section.hero .text-hero {
+  padding: 64px 16px 32px 16px;
+  text-align: center;
+}
+@media only screen and (min-width: 640px) {
+  section.hero .text-hero {
+    padding: 64px 32px 32px 32px;
+  }
+}
+@media only screen and (min-width: 1080px) {
+  section.hero .text-hero {
+    padding: 64px 64px 32px 64px;
+  }
+}
+section.hero .button-container {
+  margin: auto;
+}

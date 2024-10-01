@@ -1,0 +1,12 @@
+section.hero{
+
+    .text-hero{
+        @include padding;
+        text-align: center;
+        
+    }
+
+    .button-container{
+        margin: auto;
+    }
+}

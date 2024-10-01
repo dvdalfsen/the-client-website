@@ -53,7 +53,7 @@
    
    // font family
    
-   $ff-primary: "Archivo", sans-serif; // titles & buttons
+   $ff-primary: "Archivo", system-ui; // titles & buttons
 //    $ff-secondary: 'Open Sans', sans-serif; // Text
    
    // font size
@@ -126,6 +126,11 @@
        border-radius: $br-rectangle-top-left $br-rectangle-top-right
            $br-rectangle-bottom-right $br-rectangle-bottom-left;
    }
+
+   //border
+
+    $bor: solid #151515 2px;
+
    
    // padding
    
@@ -206,6 +211,8 @@
        color: $cl-black;
        letter-spacing: $ls-medium;
        background: $cl-white;
+       border: solid $cl-black 2px;
+       margin: 16px;
    }
    
    main{
@@ -230,7 +237,8 @@
    h1,
    h2,
    h3,
-   h4 {
+   h4,
+   p {
        font-family: $ff-primary;
        font-weight: $fw-regular;
        line-height: $lh-small;
@@ -238,6 +246,7 @@
        text-transform: initial;
        position: relative;
        z-index: 1;
+       margin: 0px;
        padding-bottom: 32px;
    }
    
@@ -286,6 +295,7 @@
        &:hover {
            color: darken($cl-primary, 4%);
        }
+       text-decoration: none;
    }
    
    // image
@@ -337,7 +347,7 @@
    
    // components
    
-//    @import 'components/button';
+   @import 'components/button';
 //    @import 'components/card';
    
    // header + footer
@@ -347,6 +357,6 @@
    
    // blocks
    
-//    @import 'blocks/hero';
+   @import 'blocks/hero';
    
    
