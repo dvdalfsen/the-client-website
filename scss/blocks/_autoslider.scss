@@ -1,0 +1,31 @@
+section.auto-slider{
+
+    display: flex;
+    flex-direction: column;
+
+    .row-1{
+
+        display: flex;
+        flex-direction: row;
+        gap: 0px;
+        overflow: scroll;
+        scrollbar-width: none;
+
+        img{
+            height: 240px;
+        }
+    }
+
+    .row-2{
+
+        display: flex;
+        flex-direction: row-reverse;
+        overflow:scroll;
+        scrollbar-width: none;
+
+        img{
+            height: 240px;
+        }
+    }
+
+}

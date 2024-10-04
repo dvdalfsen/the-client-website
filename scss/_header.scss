@@ -24,6 +24,27 @@
 
             a{
                 color: $cl-black;
+                position: relative;
+
+                &::after {    
+                    bottom: -2px;
+                    content: "";
+                    display: block;
+                    height: 2px;
+                    left: 50%;
+                    position: absolute;
+                    background: $cl-primary;
+                    @include transition;
+                    width: 0;
+                  }
+
+                  &:hover{
+
+                    &::after { 
+                        width: 100%; 
+                        left: 0; 
+                      }
+                  }
             }
         }
     }

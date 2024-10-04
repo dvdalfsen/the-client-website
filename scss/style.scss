@@ -213,6 +213,7 @@
        background: $cl-white;
        border: solid $cl-black 2px;
        margin: 16px;
+    //    overflow: hidden;
    }
    
    main{
@@ -366,5 +367,7 @@
    // blocks
    
    @import 'blocks/hero';
+   @import 'blocks/autoslider';
+
    
    
