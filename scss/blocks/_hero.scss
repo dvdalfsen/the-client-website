@@ -1,9 +1,17 @@
 section.hero{
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     .text-hero{
         @include padding;
         text-align: center;
-        
+        // width: 75%;   
+
+        h1{
+            font-size: 96px;
+        }
     }
 
     .button-container{

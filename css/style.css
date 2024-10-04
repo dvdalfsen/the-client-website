@@ -165,11 +165,10 @@ input:-webkit-autofill:active {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 96px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  max-height: 48px;
+  gap: 32px;
 }
 @media only screen and (min-width: 640px) {
   .button-container {
@@ -177,6 +176,7 @@ input:-webkit-autofill:active {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    gap: 96px;
   }
 }
 
@@ -200,18 +200,15 @@ input:-webkit-autofill:active {
   position: absolute;
   width: 48px;
   height: 100%;
-  right: -2px;
+  left: 100%;
   border: solid #151515 2px;
   border-left: 0px;
+  background-image: url("/assets/icons/icon.svg");
   background-size: 24px;
   background-position: center;
   background-repeat: no-repeat;
   -webkit-transition: all calc(0.25s * 2) ease;
   transition: all calc(0.25s * 2) ease;
-}
-.button:hover::after {
-  right: -50px;
-  background-image: url("/assets/icons/icon.svg");
 }
 
 .link {
@@ -274,6 +271,17 @@ input:-webkit-autofill:active {
   padding-right: 64px;
 }
 
+section.hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 section.hero .text-hero {
   padding: 64px 16px 32px 16px;
   text-align: center;
@@ -287,6 +295,9 @@ section.hero .text-hero {
   section.hero .text-hero {
     padding: 64px 64px 32px 64px;
   }
+}
+section.hero .text-hero h1 {
+  font-size: 96px;
 }
 section.hero .button-container {
   margin: auto;

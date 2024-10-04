@@ -1,13 +1,13 @@
 .button-container{
     display: flex;
     flex-direction: column;
-    gap: 96px;
     width: fit-content;
-    max-height: 48px;
-
+    // max-height: 48px;
+    gap: 32px;
 
     @include tablet{
         flex-direction: row;
+        gap: 96px;
     }
 }
 
@@ -32,25 +32,26 @@
         position: absolute;
         width: 48px;
         height: 100%;
-        // left: 75%;
-        right: -2px;
+        left: 100%;
+        // right: -2px;
         border: $bor;
         border-left: 0px; 
+        background-image: url('/assets/icons/icon.svg');
         background-size: 24px;
         background-position: center;
         background-repeat: no-repeat;
         @include transition-slow;
     }
 
-    &:hover{
+    // &:hover{
 
 
-        &::after{
-            // left: 100%;
-            right: -50px;
-            background-image: url('/assets/icons/icon.svg');
-        }
-    }
+    //     &::after{
+    //         // left: 100%;
+    //         right: -50px;
+    //         background-image: url('/assets/icons/icon.svg');
+    //     }
+    // }
 }
 
 .link{
